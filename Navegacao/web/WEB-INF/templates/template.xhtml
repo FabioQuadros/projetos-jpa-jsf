@@ -1,0 +1,31 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>K19 Navegação</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <div id="header" style="text-align: center">
+            <h1>K19 - Desenvolvimento Web com JSF2 e JPA2</h1>
+        </div>
+        
+        <h:form>
+            <h:commandButton value="Anterior" action="Anterior"/>
+            <h:commandButton value="Próximo" action="Proximo"/>
+        </h:form>
+        
+        <h:link value="Componentes Visuais" outcome="componentes-visuais"/>
+        <h:link value="Templates e Modularização" outcome="templates-e-modularizacao"/>
+        <h:link value="Navegação" outcome="navegacao"/>
+        
+        <ui:insert name="corpo-da-pagina">Espaço para conteudo da tela</ui:insert>
+        
+        <div id="footer" style="text-align: center">
+            &copy; 2019 K19. Todos os direitos reservados.
+        </div>
+    </h:body>
+</html>

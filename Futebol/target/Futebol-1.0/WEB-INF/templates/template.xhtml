@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Futebol</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    
+    <h:body>
+        <h:outputStylesheet library="css" name="style.css"/>
+        
+        <div id="header">
+            <h:form style="float: left;">
+                <h:link value="Times " outcome="times" /> 
+                <h:link value=" Jogadores" outcome="jogadores"/>                
+            </h:form>
+            <h:graphicImage library="imagens" name="Logo-Gas-K19.png" 
+                             style="float:  right;"/>
+            <div style="clear: both;"></div>
+        </div>
+        
+        <div id="conteudo">
+            <ui:insert name="conteudo">
+                <!-- espaco para o cconteudo da tela-->
+            </ui:insert>
+        </div>
+        
+        <div id="footer" style="text-align: center;">
+             2019 Fabio Guedes. Todos os direitos reservados. 
+        </div>
+    </h:body>
+</html>

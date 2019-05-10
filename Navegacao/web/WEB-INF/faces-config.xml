@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    
+    <navigation-rule>
+        <from-view-id>componentes-visuais.xhtml</from-view-id>
+        
+        <navigation-case>
+            <from-outcome>Proximo</from-outcome>
+            <to-view-id>templates-e-modularizacao.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>templates-e-modularizacao.xhtml</from-view-id>
+        
+        <navigation-case>
+            <from-outcome>Proximo</from-outcome>
+            <to-view-id>navegacao.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>Anterior</from-outcome>
+            <to-view-id>componentes-visuais.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>navegacao.xhtml</from-view-id>
+        
+        <navigation-case>
+            <from-outcome>Anterior</from-outcome>
+            <to-view-id>templates-e-modularizacao.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    
+</faces-config>

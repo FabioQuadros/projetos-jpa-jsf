@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>K19 Treinamentos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:commandButton value="Converter" 
+                             action="#{conversorMonetarioBean.converter()}"/>
+            
+            <br/><br/>
+            <h:inputText value="#{conversorMonetarioBean.valor}"/>
+            <br/><br/>
+            <h:outputLabel value="de" for="de"/><br/>
+            <h:selectOneMenu value="#{conversorMonetarioBean.de}" id="de">
+                <f:selectItems
+                    value="#{conversorMonetarioBean.taxas.keySet()}"
+                    var="moeda"
+                    itemValue="#{moeda}"
+                    itemLabel="#{moeda}" />
+            </h:selectOneMenu>
+            <br/><br/>
+            <h:outputLabel value="para" for="para"/><br/>
+            <h:selectOneMenu value="#{conversorMonetarioBean.para}" id="para">
+                <f:selectItems
+                    value="#{conversorMonetarioBean.taxas.keySet()}"
+                    var="moeda"
+                    itemValue="#{moeda}"
+                    itemLabel="#{moeda}"/>
+            </h:selectOneMenu>
+        </h:form>
+        
+        <h:outputFormat value="{0} em {1} equivale a {2} em {3}"
+                        rendered="#{conversorMonetarioBean.resultado !=null}">
+            <f:param value="#{conversorMonetarioBean.valor}"/>
+            <f:param value="#{conversorMonetarioBean.de}"/>
+            <f:param value="#{conversorMonetarioBean.resultado}"/>
+            <f:param value="#{conversorMonetarioBean.para}"/>
+        </h:outputFormat>
+        
+        
+       
+    </h:body>
+</html>

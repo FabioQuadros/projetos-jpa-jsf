@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/02/2019, 18:09:30
+    Author     : Fabio Guedes
+*/
+
+body{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 14px; 
+}
+
+h1{
+    color: #006699;
+    font-size: 18px;
+}
+
+ul{
+    list-style-type: square;
+}
+input{
+    background-color: #E6E6FA;
+    border: solid 1px #000000;
+}
